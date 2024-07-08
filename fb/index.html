@@ -161,7 +161,14 @@ function toggleMenu(menuId) {
 </script>
 
 
+<script>
 
+translate.setAutoDiscriminateLocalLanguage();//自动识别地区
+translate.language.setDefaultTo('english');//默认翻译语言
+translate.request.api.host=['https://api.translate.zvo.cn/','https://api2.translate.zvo.cn/'];
+translate.listener.start();//开启html页面变化的监控，对变化部分会进行自动翻译。
+translate.execute();//进行翻译
+</script>
 
 
 </body>
